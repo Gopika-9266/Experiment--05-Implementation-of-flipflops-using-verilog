@@ -112,10 +112,7 @@ Program for flipflops  and verify its truth table in quartus using Verilog progr
 Developed by:Gopika R 
 RegisterNumber: 22009266 
 */
-
-
-
-
+[ilovepdf_pages-to-jpg (11).zip](https://github.com/Gopika-9266/Experiment--05-Implementation-of-flipflops-using-verilog/files/10480245/ilovepdf_pages-to-jpg.11.zip)
 
 
 ### RTL LOGIC FOR FLIPFLOPS 

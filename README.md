@@ -174,7 +174,7 @@ endmodule
 
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
 ```
-Developed by:Gopika R 
+Developed by:Gopika.R 
 RegisterNumber: 22009266 
 ```
 

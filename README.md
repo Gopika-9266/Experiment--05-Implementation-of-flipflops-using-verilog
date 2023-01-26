@@ -102,36 +102,114 @@ Q(t+1)=T′Q(t)+TQ(t)′
 ⇒Q(t+1)=T⊕Q(t)
 
 ### Procedure
-/* write all the steps invloved */
+
+1.Using nand gates and wires construct SR flipflop.
+2.Repeat same steps to construct JK,D,T flipflops.
+3.Find Rtl logic and timing diagram for all flipflops.
+4.end the program.
 
 
 
 ### PROGRAM 
-/*
+
+
+module SRflipflop(s,r,clock,q,qbar);
+input s,r,clock;
+output q,qbar;
+wire x,y;
+nand(x,s,clock);
+nand(y,r,clock);
+nand(q,x,Qbar);
+nand(Qbar,y,q);
+endmodule
+
+
+
+module Dflipflop(D,clock,Q,Qbar);
+input D,clock;
+output Q,Qbar;
+assign Dbar = ~D;
+wire X,Y;
+nand(X,D,clock);
+nand(Y,Dbar,clock);
+nand(Q,X,Qbar);
+nand(Qbar,Y,Q);
+endmodule
+
+
+
+module JKflipflop(J,K,clock,Q,Qbar);
+input J,K,clock;
+output Q,Qbar;
+wire P,S;
+nand(P,J,clock,Qbar);
+nand(S,K,clock,Q);
+nand(Q,P,Qbar);
+nand(Qbar,S,Q);
+endmodule
+
+
+
+module Tflipflop(T,clock,Q,Qbar);
+input T,clock;
+output Q,Qbar;
+wire A,B;
+nand(A,T,clock,Qbar);
+nand(B,T,clock,Q);
+nand(Q,A,Qbar);
+nand(Qbar,B,Q);
+endmodule
+
+
+
+
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
 Developed by:Gopika R 
 RegisterNumber: 22009266 
-*/
-[ilovepdf_pages-to-jpg (11).zip](https://github.com/Gopika-9266/Experiment--05-Implementation-of-flipflops-using-verilog/files/10480245/ilovepdf_pages-to-jpg.11.zip)
-
-
-### RTL LOGIC FOR FLIPFLOPS 
 
 
 
+### RTL LOGIC FOR FLIPFLOPS:
+
+![Screenshot (37)](https://user-images.githubusercontent.com/122762773/214761729-db88c04e-d99b-450a-9472-599ce19b1f74.png)
 
 
+![Screenshot (42)](https://user-images.githubusercontent.com/122762773/214761753-bf11292d-d052-401a-bed9-d3d9d78709d7.png)
 
 
+![Screenshot (44)](https://user-images.githubusercontent.com/122762773/214761776-e21556ea-d887-467e-8681-4f25f6487abe.png)
 
 
-### TIMING DIGRAMS FOR FLIP FLOPS 
+![Screenshot (46)](https://user-images.githubusercontent.com/122762773/214761795-8fa87042-45ec-4527-ad61-c43697ed8626.png)
+
+### TRUTH TABLES:
+
+![213161728-4847ab42-de9d-4483-b2cd-4ae8363b24f9](https://user-images.githubusercontent.com/122762773/214762069-91e3c77e-0a61-4f29-a5a3-ee28926d9fe5.png)
 
 
+![213161831-d6090d5e-3b8f-437d-8092-ca7d2d267c19](https://user-images.githubusercontent.com/122762773/214762078-ebbadb83-68a9-4d69-bf8b-d5693bc3fc94.png)
 
 
+![213161880-1c4e6960-c043-4edf-9256-b2c6ab96e351](https://user-images.githubusercontent.com/122762773/214762087-788a2cc2-e637-44d7-a069-61d2a7c95ca6.png)
 
 
+![213161962-4d45ee10-6c1c-4502-bbbf-d05104b3af1d](https://user-images.githubusercontent.com/122762773/214762102-4f3d783c-669a-44f3-88ef-f44dd65a94c9.png)
 
 
-### RESULTS 
+### TIMING DIGRAMS FOR FLIP FLOPS:
+
+
+![Screenshot (38)](https://user-images.githubusercontent.com/122762773/214761842-709f5710-5db4-4298-a9a2-1333ffb603b0.png)
+
+
+![Screenshot (43)](https://user-images.githubusercontent.com/122762773/214761868-949be809-e7e3-41a4-abdb-90c573aaa625.png)
+
+
+![Screenshot (45)](https://user-images.githubusercontent.com/122762773/214761889-d9b65e47-273c-4008-bce5-b0ae1c1eeb50.png)
+
+
+![Screenshot (89)](https://user-images.githubusercontent.com/122762773/214761932-fb00c5fe-ab96-45df-89b7-67aa097e813f.png)
+
+
+### RESULTS:
+       All the flipflops are done successfully.

@@ -112,7 +112,9 @@ Q(t+1)=T′Q(t)+TQ(t)′
 
 ### PROGRAM 
 
+1. SR flipflop:
 
+```
 module SRflipflop(s,r,clock,q,qbar);
 input s,r,clock;
 output q,qbar;
@@ -122,9 +124,11 @@ nand(y,r,clock);
 nand(q,x,Qbar);
 nand(Qbar,y,q);
 endmodule
+```
 
+2.D flipflop:
 
-
+```
 module Dflipflop(D,clock,Q,Qbar);
 input D,clock;
 output Q,Qbar;
@@ -135,9 +139,12 @@ nand(Y,Dbar,clock);
 nand(Q,X,Qbar);
 nand(Qbar,Y,Q);
 endmodule
+```
 
 
+3.JK flipflop:
 
+```
 module JKflipflop(J,K,clock,Q,Qbar);
 input J,K,clock;
 output Q,Qbar;
@@ -147,9 +154,12 @@ nand(S,K,clock,Q);
 nand(Q,P,Qbar);
 nand(Qbar,S,Q);
 endmodule
+```
 
 
+4.T flipflop:
 
+```
 module Tflipflop(T,clock,Q,Qbar);
 input T,clock;
 output Q,Qbar;
@@ -159,14 +169,14 @@ nand(B,T,clock,Q);
 nand(Q,A,Qbar);
 nand(Qbar,B,Q);
 endmodule
-
-
+```
 
 
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
+```
 Developed by:Gopika R 
 RegisterNumber: 22009266 
-
+```
 
 
 ### RTL LOGIC FOR FLIPFLOPS:
